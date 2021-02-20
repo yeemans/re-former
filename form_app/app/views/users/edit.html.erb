@@ -1,0 +1,14 @@
+<h1>Editing User</h1>
+
+<%= form_with model: @user do |form| %>
+  <%= label_tag(:username, "Username: ") %>
+  <%= form.text_field :username, :placeholder => "Daddy Lemon" %>
+  <%= label_tag(:password, "Password: ") %>
+  <%= form.password_field :password, :placeholder => "8 characters" %>
+  <%= label_tag(:email, "Email: ") %>
+  <%= form.email_field :email, :placeholder => "daddylemon@gmail.com" %>
+  <%= form.submit("Create User") %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
